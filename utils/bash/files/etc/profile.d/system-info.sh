@@ -53,8 +53,8 @@ then
     ip_pre=$(/sbin/ip a | grep inet | grep -v "127.0.0.1" | grep -v inet6 | awk '{print $2}')
 fi
 
-echo -e "\n"
-echo -e "Welcome to $welcome\n"
+#echo -e "\n"
+echo -e "Welcome to $welcome"
 echo -e "System information as of time: \t$time_cur\n"
 echo -e "System load: \t\033[0;33;40m$load_average\033[0m"
 echo -e "Processes: \t$processes"
@@ -66,11 +66,4 @@ do
     ip_address=${line%/*}
     echo -e "IP address: \t$ip_address"
 done
-
-if [ "$whoiam" == "root" ]
-then
-    echo -e "\n"
-else
-    echo -e "To run a command as administrator(user \"root\"),use \"sudo <command>\"."
-fi
-
+echo -e ""

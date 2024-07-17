@@ -6,13 +6,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=smartdns
-PKG_VERSION:=1.2023.43
-PKG_RELEASE:=1
+PKG_VERSION:=Release46
+PKG_RELEASE:=29
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://www.github.com/pymumu/smartdns.git
-PKG_SOURCE_VERSION:=ed102cda03c56e9c63040d33d4a391b56491493e
-PKG_MIRROR_HASH:=dc9d3ad2549ec12ea840239acbffb7e720fedaa9b53099ddb5eaea54947d1b0f
+PKG_SOURCE_VERSION:=07c13827bb523519a638214ed7ad76180f71a40a
+PKG_MIRROR_HASH:=skip
 
 PKG_MAINTAINER:=Nick Peng <pymumu@gmail.com>
 PKG_LICENSE:=GPL-3.0-or-later
@@ -22,7 +22,7 @@ PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-MAKE_VARS += VER=$(PKG_VERSION)
+MAKE_VARS += VER=$(PKG_VERSION) 
 MAKE_PATH:=src
 
 define Package/smartdns
